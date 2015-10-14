@@ -1,0 +1,19 @@
+application: chetanya-meghashree
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: app/index.html
+
+- url: /css
+  static_dir: app/css
+
+- url: /js
+  static_dir: app/css
+
+- url: /(.*\.(gif|png|jpg))$
+  static_files: images/\1
+    upload: app/images/.*\.(gif|png|jpg)$
