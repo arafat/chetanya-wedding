@@ -10,7 +10,7 @@ class MainPage(webapp2.RequestHandler):
     return jinja2.get_jinja2(app=self.app)
 
   def get(self):
-    rv = self.jinja2.render_template('templates/index.html')
+    rv = self.jinja2.render_template('index.html')
     self.response.write(rv)
     
 app = webapp2.WSGIApplication([('/', MainPage),], debug=True)

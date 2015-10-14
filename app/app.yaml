@@ -9,15 +9,15 @@ handlers:
   script: main.app
 
 - url: /css
-  static_dir: /css
+  static_dir: css
 
 - url: /js
-  static_dir: /js
+  static_dir: js
 
 - url: /templates
   static_dir: /
   
-- url: /(.*\.(gif|png|jpg))$
+- url: /images/(.*\.(gif|png|jpg))$
   static_files: images/\1
   upload: images/.*\.(gif|png|jpg)$
 
