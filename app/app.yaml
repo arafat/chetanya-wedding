@@ -9,14 +9,14 @@ handlers:
   script: main.app
 
 - url: /css
-  static_dir: app/css
+  static_dir: /css
 
 - url: /js
-  static_dir: app/js
+  static_dir: /js
 
 - url: /(.*\.(gif|png|jpg))$
   static_files: images/\1
-    upload: app/images/.*\.(gif|png|jpg)$
+  upload: images/.*\.(gif|png|jpg)$
 
 libraries:
 - name: webapp2
