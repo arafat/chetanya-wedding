@@ -8,18 +8,18 @@ handlers:
 - url: /
   script: main.app
 
-- url: /css
+- url: /css/new
   static_dir: css
 
-- url: /js
+- url: /js/new
   static_dir: js
 
-- url: /templates
+- url: /templates/new
   static_dir: /
   
-- url: /images/(.*\.(gif|png|jpg))$
-  static_files: images/\1
-  upload: images/.*\.(gif|png|jpg)$
+- url: /images/new/(.*\.(gif|png|jpg))$
+  static_files: images/new/\1
+  upload: images/new/.*\.(gif|png|jpg)$
 
 libraries:
 - name: webapp2
