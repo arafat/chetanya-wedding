@@ -5,21 +5,21 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /
-  script: main.app
+- url: /css/new/(.*)/(.*)
+  static_dir: css/new/\1
 
-- url: /css/new
-  static_dir: css
-
-- url: /js/new
-  static_dir: js
+- url: /js/new/(.*)/(.*)
+  static_dir: js/new/\1
 
 - url: /templates/new
-  static_dir: /
-  
+  static_dir: /templates
+
 - url: /images/new/(.*\.(gif|png|jpg))$
   static_files: images/new/\1
   upload: images/new/.*\.(gif|png|jpg)$
+
+- url: /.*
+  script: main.app
 
 libraries:
 - name: webapp2
