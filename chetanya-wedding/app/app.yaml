@@ -16,7 +16,7 @@ handlers:
 
 - url: /images/new/(.*\.(gif|png|jpg))$
   static_files: images/new/\1
-  upload: images/new/.*\.(gif|png|jpg)$
+  upload: images/new/(.*\.(gif|png|jpg))$
 
 - url: /.*
   script: main.app
