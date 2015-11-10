@@ -1,6 +1,7 @@
 import webapp2
 
 from webapp2_extras import jinja2
+from webapp2_extras import routes
 
 class MainPage(webapp2.RequestHandler):
 
@@ -13,4 +14,7 @@ class MainPage(webapp2.RequestHandler):
     rv = self.jinja2.render_template('new/index.html')
     self.response.write(rv)
 
-app = webapp2.WSGIApplication([('/', MainPage)], debug=True)
+app = webapp2.WSGIApplication([('/weds-meghashree', MainPage),
+                               routes.RedirectRoute('/<:\w*>',
+                                                    redirect_to='/weds-meghashree')],
+                              debug=True)
